@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="usermotto">
+  <!-- 账号 -->
+  <view class="input">
+  <text>游戏账号</text>
+  <input placeholder="请填写游戏账号" name='value' type='text' placeholder-class="txt" maxlength="18" bindinput="bindGameNumInput"/>
+  </view>
+  <!-- 密码 -->
+  <view class="input">
+  <text>密码</text>
+  <input placeholder="请填写游戏密码" name='value' type='text' placeholder-class="txt" maxlength="18" bindinput="bindKeywordInput"/>
+  </view>
+  <view class="input">
+  <text>身份证号</text>
+  <input placeholder="请填写身份证号码" name='value' type='text' placeholder-class="txt" maxlength="18" bindinput="bindICNumInput"/>
+  </view>
+  <view class="input">
+  <text>姓名</text>
+  <input placeholder="请填写姓名" name='value' type='text' placeholder-class="txt" maxlength="18" bindinput="bindNameInput"/>
+  <view class='camera'><camera wx:if="{{isAuth}}" device-position="front" flash="off" binderror="error"></camera></view>
+  </view>
+  <view>
+    <!-- 已经证明src是可以显示出人脸图片的<image  style="width: 100%;" src="{{src}}" ></image> -->
+    <button class="submit1" bindtap="takePhoto">拍照</button>
+  </view>
+  <view>
+    <button class="submit3" bindtap="chooseImg">从相册中选择</button>
+  </view>
+  <view>
+  <button class="submit2" bindtap="loginBtnAction">实名认证</button>
+  </view>
+  </view>
+</view>
